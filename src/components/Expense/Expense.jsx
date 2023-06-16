@@ -1,19 +1,22 @@
-import ExpenseItem from './ExpenseItem'
-import "./Expense.css"
+import Card from "../UI/Card";
+import ExpenseItem from "./ExpenseItem";
+import "./Expense.css";
+import ExpensesFilter from "./ExpenseFilter";
 
 function Expense({ items }) {
   return (
-    <div className="expenses">
-      {items.map((expense) => (
+    <Card className="expenses">
+      <ExpensesFilter />
+      {items.map((item) => (
         <ExpenseItem
-          key={expense.id}
-          title={expense.title}
-          amount={expense.amount}
-          date={expense.date}
+          key={item.id}
+          title={item.title}
+          amount={item.amount}
+          date={item.date}
         />
       ))}
-    </div >
+    </Card>
   );
 }
 
-export default Expense
+export default Expense;

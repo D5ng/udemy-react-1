@@ -1,11 +1,10 @@
-import { useState } from 'react';
-import Card from '../UI/Card'
-import ExpenseDate from './ExpenseDate';
-import './ExpenseItem.css'
+import { useState } from "react";
+import Card from "../UI/Card";
+import ExpenseDate from "./ExpenseDate";
+import "./ExpenseItem.css";
 
-
-function ExpenseItem({ date, title, amount}) {
-  const [data, setData ] = useState(title);
+function ExpenseItem({ date, title, amount }) {
+  const [data, setData] = useState(title);
   const clickHandler = () => setData("Clicked");
   return (
     <Card className="expense-item">
@@ -19,4 +18,4 @@ function ExpenseItem({ date, title, amount}) {
   );
 }
 
-export default ExpenseItem
+export default ExpenseItem;
