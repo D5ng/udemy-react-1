@@ -1,9 +1,9 @@
 import "./ChartBar.css";
 
-function ChartBar({ label, value, max, maxValue }) {
+function ChartBar({ label, value, maxValue }) {
   let barFillHeight = "0%";
 
-  if (max > 0) {
+  if (maxValue > 0) {
     barFillHeight = Math.round((value / maxValue) * 100) + "%";
   }
 
